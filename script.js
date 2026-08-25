@@ -175,7 +175,7 @@
         const pinPopupClose = document.getElementById('pin-popup-close');
 
         // DEFAULT PIN: Silakan ubah angka ini jika ingin PIN lain
-        const SECRET_PIN = "0523";
+        const SECRET_PIN = "2526";
 
         let pinAttempt = 0;
         let popupTimeout = null;
@@ -748,7 +748,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     galleryScroll.addEventListener('scroll', updateSlider);
                 }
                 if (galleryHint) {
-                    galleryHint.textContent = 'Semua foto sudah terbuka! Geser kesamping untuk melihatnya';
+                    galleryHint.textContent = 'Cantiknya My Princess';
                     galleryHint.classList.add('hint-unlocked');
                 }
             } else {
