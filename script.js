@@ -175,7 +175,7 @@
         const pinPopupClose = document.getElementById('pin-popup-close');
 
         // DEFAULT PIN: Silakan ubah angka ini jika ingin PIN lain
-        const SECRET_PIN = "2526";
+        const SECRET_PIN = "2708";
 
         let pinAttempt = 0;
         let popupTimeout = null;
@@ -748,7 +748,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     galleryScroll.addEventListener('scroll', updateSlider);
                 }
                 if (galleryHint) {
-                    galleryHint.textContent = 'Cantiknya My Princess';
+                    galleryHint.textContent = 'Semua foto sudah terbuka, sekarang sayang bisa geser foto-fotonya';
                     galleryHint.classList.add('hint-unlocked');
                 }
             } else {
@@ -768,7 +768,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
             canvas.width = 220;
-            canvas.height = Math.round(220 * 16 / 9);
+            canvas.height = Math.round(220 * 4 / 3);
 
             ctx.fillStyle = '#0a0a0a';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -1084,7 +1084,7 @@ function tampilkanTahap1() {
     const flames = document.querySelectorAll('.candle-flame');
 
     if (msg) {
-        msg.textContent = 'Lilin mulai ditiup...';
+        msg.textContent = 'Lilin anniversary mulai ditiup... 🌹';
         msg.className = 'candle-message show-msg';
     }
 
@@ -1101,7 +1101,7 @@ function tampilkanTahap2() {
     if (msg) {
         msg.className = 'candle-message'; // fade out dulu
         setTimeout(() => {
-            msg.textContent = 'Make a wish, Berdoa dulu yaa.. ';
+            msg.textContent = 'Pejamkan mata, buat harapan untuk kita berdua.. 💍';
             msg.className = 'candle-message show-msg';
         }, 400);
     }
@@ -1145,7 +1145,7 @@ function tampilkanTahap3() {
 
         setTimeout(() => {
             if (msg) {
-                msg.textContent = 'Semoga apa yang kamu doakan dan inginkan segera terlaksana yaa, Aamiin 🤍';
+                msg.textContent = 'Semoga cinta kita terus tumbuh dan abadi selamanya. Happy 1st Anniversary, sayang 🤍💍';
                 msg.className = 'candle-message show-msg final-msg';
             }
         }, 600);
@@ -1157,10 +1157,10 @@ function tampilkanTahap3() {
 
 function buatConfetti() {
     const colors = [
-        '#ff6b81', '#ffb6c1', '#a55eea', '#6c5ce7', '#ffd700',
-        '#ff9ff3', '#f368e0', '#ffffff', '#00d2d3', '#ff6348',
-        '#7bed9f', '#ffa502', '#ff4757', '#2ed573', '#eccc68',
-        '#ff7eb3', '#c56cf0', '#17c0eb', '#ffc312'
+        '#e74c6f', '#ffb6c1', '#c4944a', '#d4a574', '#ffd700',
+        '#f2c4c8', '#e8a0b0', '#ffffff', '#b8935a', '#ff6b81',
+        '#f7d6c0', '#d68898', '#ff9eaf', '#c87888', '#e8b89a',
+        '#ff7eb3', '#a87e3d', '#fce4ec', '#f0b8c4'
     ];
     const shapes = ['circle', 'rect', 'star', 'heart', 'ribbon'];
     const animStyles = ['', 'confetti-swirl', 'confetti-zigzag'];

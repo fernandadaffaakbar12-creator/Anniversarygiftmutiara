@@ -380,8 +380,8 @@ body {
    FOTO BIRTHDAY (PNG Transparan)
 ========================================= */
 .birthday-photo {
-    width: 280px;
-    max-width: 70%;
+    width: 340px;
+    max-width: 85%;
     height: auto;
     margin: 20px auto 15px auto;
     display: block;
@@ -760,7 +760,7 @@ body {
     position: relative;
     flex: 0 0 auto;
     width: 220px;
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 3 / 4;
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.3) !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
@@ -1587,7 +1587,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: 99990;
-    background: radial-gradient(ellipse at center bottom, #1a0a2e 0%, #0d0521 40%, #050210 80%, #000005 100%);
+    background: radial-gradient(ellipse at center bottom, #2a0a1e 0%, #1a0515 40%, #0d0210 80%, #050005 100%);
     opacity: 0;
     transition: opacity 0.8s ease;
     overflow-y: auto;
@@ -1635,16 +1635,8 @@ body {
 }
 
 /* =========================================
-   BIRTHDAY CAKE (CSS Art)
+   CANDLES & FLAMES
 ========================================= */
-.cake-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin-top: 40px;
-}
-
 .candles-row {
     display: flex;
     gap: 28px;
@@ -1666,30 +1658,8 @@ body {
     align-items: center;
 }
 
-.candle-body {
-    width: 12px;
-    height: 50px;
-    background: linear-gradient(180deg, #ff9ecf, #e876a8);
-    border-radius: 2px 2px 0 0;
-    position: relative;
-    box-shadow: inset -2px 0 4px rgba(0,0,0,0.15);
-}
-
-.candle-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 8px;
-    background: #333;
-    border-radius: 1px;
-}
-
 /* =========================================
    LILIN BERBENTUK ANGKA (Number-Shaped Candles)
-   Angka itu sendiri adalah badan lilin
 ========================================= */
 .candle-number-body {
     position: relative;
@@ -1719,32 +1689,29 @@ body {
     line-height: 1;
     position: relative;
     z-index: 1;
-    /* Wax gradient effect */
+    /* Rose-gold wax gradient for anniversary */
     background: linear-gradient(
         180deg,
-        #ffcce0 0%,
-        #ffb6d3 15%,
-        #ff9ecf 30%,
-        #e876a8 55%,
-        #d65d8c 75%,
-        #c44e7d 100%
+        #f7d6c0 0%,
+        #e8b89a 15%,
+        #d4a574 30%,
+        #c4944a 55%,
+        #b88540 75%,
+        #a87e3d 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* 3D wax-like depth with paint-order trick */
     paint-order: stroke fill;
-    -webkit-text-stroke: 3px rgba(200, 80, 130, 0.5);
+    -webkit-text-stroke: 3px rgba(196, 148, 74, 0.5);
     filter: drop-shadow(1px 2px 1px rgba(0,0,0,0.35))
             drop-shadow(-1px 0px 1px rgba(255,255,255,0.15))
             drop-shadow(0 4px 8px rgba(0,0,0,0.25));
 }
 
-
-
 /* Efek glow di sekitar lilin angka */
 .number-candle {
-    filter: drop-shadow(0 0 12px rgba(255, 160, 200, 0.35));
+    filter: drop-shadow(0 0 12px rgba(196, 148, 74, 0.4));
 }
 
 /* Highlight sinar di atas angka */
@@ -1805,10 +1772,7 @@ body {
     z-index: 1;
 }
 
-/* Delay berbeda untuk setiap api lilin */
 .flame-1::before { animation-delay: 0s; }
-.flame-2::before { animation-delay: 0.1s; }
-.flame-3::before { animation-delay: 0.2s; }
 
 /* State: api redup */
 .candle-flame.dimming {
@@ -1856,94 +1820,260 @@ body {
     100% { opacity: 0; transform: translateX(-50%) translateY(-30px); }
 }
 
-/* KUE */
-.cake {
-    position: relative;
-    width: 200px;
-}
-
-.cake-top {
-    width: 200px;
-    height: 18px;
-    background: linear-gradient(180deg, #ffb6c1, #ff8fa3);
-    border-radius: 8px 8px 0 0;
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 -2px 8px rgba(255, 182, 193, 0.3);
-}
-
-.cake-middle {
-    width: 200px;
-    height: 55px;
-    background: linear-gradient(180deg, #f8e0e6, #f0c8d0);
-    position: relative;
-    border-left: 3px solid rgba(255,255,255,0.1);
-    border-right: 3px solid rgba(0,0,0,0.05);
-}
-
-.cake-bottom {
-    width: 200px;
-    height: 55px;
-    background: linear-gradient(180deg, #e8a0b0, #d68898);
-    border-radius: 0 0 8px 8px;
-    position: relative;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    border-left: 3px solid rgba(255,255,255,0.1);
-    border-right: 3px solid rgba(0,0,0,0.05);
-}
-
-/* Frosting drips */
-.cake-frosting {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    z-index: 2;
-}
-
-.cake-frosting span {
-    display: block;
-    width: 16px;
-    height: 22px;
-    background: linear-gradient(180deg, #ffb6c1, #ff9eaf);
-    border-radius: 0 0 50% 50%;
-    animation: frostDrip 3s ease-in-out infinite alternate;
-}
-
-.cake-frosting span:nth-child(even) {
-    height: 28px;
-    animation-delay: 0.5s;
-}
-
 @keyframes frostDrip {
     0% { transform: scaleY(1); }
     100% { transform: scaleY(1.15); }
 }
 
-/* Dekorasi */
-.cake-decoration {
+/* =========================================
+   ANNIVERSARY CAKE TOPPER (Heart on stick)
+========================================= */
+.cake-topper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    margin-bottom: -5px;
+}
+
+.topper-heart {
+    font-size: 2rem;
+    color: #e74c6f;
+    text-shadow: 0 0 12px rgba(231, 76, 111, 0.6), 0 0 25px rgba(231, 76, 111, 0.3);
+    animation: topperPulse 2s ease-in-out infinite;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.topper-stick {
+    width: 3px;
+    height: 18px;
+    background: linear-gradient(180deg, #d4a574, #b8935a);
+    border-radius: 1px;
+    box-shadow: 1px 0 2px rgba(0,0,0,0.2);
+}
+
+@keyframes topperPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+/* =========================================
+   ANNIVERSARY CAKE - 2 TIER DESIGN
+========================================= */
+.cake-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 40px;
+}
+
+.anniv-cake {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 260px;
+}
+
+/* --- TIER ATAS (Smaller Top Tier) --- */
+.cake-tier-top {
+    position: relative;
+    width: 140px;
+    z-index: 2;
+}
+
+.tier-top-surface {
+    width: 140px;
+    height: 16px;
+    background: linear-gradient(180deg, #f2c4c8, #e8a8b0);
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 -3px 10px rgba(232, 168, 176, 0.4), inset 0 2px 4px rgba(255,255,255,0.3);
+}
+
+.tier-top-body {
+    width: 140px;
+    height: 50px;
+    background: linear-gradient(180deg, #fce4ec 0%, #f8d0d8 30%, #f0b8c4 70%, #e8a0b0 100%);
+    position: relative;
+    border-left: 2px solid rgba(255,255,255,0.15);
+    border-right: 2px solid rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* "1st" text pada kue */
+.anniv-text {
+    font-family: 'Caveat', cursive;
+    font-size: 1.6rem;
+    color: #c4944a;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2), 0 0 10px rgba(196, 148, 74, 0.3);
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.anniv-text sup {
+    font-size: 0.7em;
+    vertical-align: super;
+}
+
+/* Frosting tier atas */
+.tier-top-frosting {
     position: absolute;
-    bottom: 60px;
+    bottom: -8px;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 0 10px;
-    font-size: 0.8rem;
+    z-index: 3;
 }
 
-/* Glow di sekitar kue */
+.tier-top-frosting span {
+    display: block;
+    width: 22px;
+    height: 16px;
+    background: linear-gradient(180deg, #f2c4c8, #e8a0b0);
+    border-radius: 0 0 50% 50%;
+    animation: frostDrip 3s ease-in-out infinite alternate;
+}
+
+.tier-top-frosting span:nth-child(even) {
+    height: 22px;
+    animation-delay: 0.5s;
+}
+
+/* --- TIER BAWAH (Larger Bottom Tier) --- */
+.cake-tier-bottom {
+    position: relative;
+    width: 200px;
+    z-index: 1;
+    margin-top: 2px;
+}
+
+.tier-bottom-surface {
+    width: 200px;
+    height: 14px;
+    background: linear-gradient(180deg, #e8a0b0, #d68898);
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    box-shadow: 0 -2px 8px rgba(214, 136, 152, 0.3), inset 0 2px 3px rgba(255,255,255,0.2);
+}
+
+.tier-bottom-body {
+    width: 200px;
+    height: 60px;
+    background: linear-gradient(180deg, #f0c8d0 0%, #e8b0bc 30%, #d8909c 70%, #c87888 100%);
+    position: relative;
+    border-left: 2px solid rgba(255,255,255,0.12);
+    border-right: 2px solid rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Baris hati dekoratif di tier bawah */
+.anniv-hearts-row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.anniv-hearts-row span {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.45);
+    animation: heartFloat 2.5s ease-in-out infinite;
+}
+
+.anniv-hearts-row span:nth-child(even) {
+    animation-delay: 0.5s;
+    color: rgba(255, 200, 210, 0.5);
+}
+
+.anniv-hearts-row span:nth-child(3n) {
+    animation-delay: 1s;
+}
+
+@keyframes heartFloat {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+    50% { transform: translateY(-3px) scale(1.2); opacity: 0.8; }
+}
+
+/* Frosting tier bawah */
+.tier-bottom-frosting {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 3;
+}
+
+.tier-bottom-frosting span {
+    display: block;
+    width: 20px;
+    height: 18px;
+    background: linear-gradient(180deg, #d68898, #c47080);
+    border-radius: 0 0 50% 50%;
+    animation: frostDrip 3.5s ease-in-out infinite alternate;
+}
+
+.tier-bottom-frosting span:nth-child(even) {
+    height: 24px;
+    animation-delay: 0.7s;
+}
+
+/* --- ALAS KUE (Cake Base / Board) --- */
+.cake-base {
+    width: 230px;
+    height: 12px;
+    background: linear-gradient(180deg, #c4944a, #a87e3d);
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 0 8px 25px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
+    margin-top: 2px;
+}
+
+.cake-base::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.15), transparent);
+    border-radius: 0 0 6px 6px;
+}
+
+/* Dekorasi bunga & cincin */
+.anniv-deco {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10px;
+    font-size: 0.85rem;
+}
+
+/* Glow romantis di sekitar kue */
 .cake-container::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 250px;
-    height: 60px;
-    background: radial-gradient(ellipse, rgba(255, 182, 193, 0.15), transparent 70%);
+    width: 280px;
+    height: 70px;
+    background: radial-gradient(ellipse, rgba(231, 76, 111, 0.12) 0%, rgba(196, 148, 74, 0.08) 40%, transparent 70%);
     border-radius: 50%;
     z-index: 0;
 }
