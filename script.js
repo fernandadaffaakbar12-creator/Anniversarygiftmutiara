@@ -1084,7 +1084,7 @@ function tampilkanTahap1() {
     const flames = document.querySelectorAll('.candle-flame');
 
     if (msg) {
-        msg.textContent = 'Lilin anniversary mulai ditiup... 🌹';
+        msg.textContent = 'Lilin anniversary mulai ditiup..';
         msg.className = 'candle-message show-msg';
     }
 
@@ -1101,7 +1101,7 @@ function tampilkanTahap2() {
     if (msg) {
         msg.className = 'candle-message'; // fade out dulu
         setTimeout(() => {
-            msg.textContent = 'Pejamkan mata, buat harapan untuk kita berdua.. 💍';
+            msg.textContent = 'Pejamkan mata, buat harapan untuk kita berdua..';
             msg.className = 'candle-message show-msg';
         }, 400);
     }
@@ -1145,7 +1145,7 @@ function tampilkanTahap3() {
 
         setTimeout(() => {
             if (msg) {
-                msg.textContent = 'Semoga cinta kita terus tumbuh dan abadi selamanya. Happy 1st Anniversary, sayang 🤍💍';
+                msg.textContent = 'Semoga cinta kita terus tumbuh dan abadi selamanya. Happy 8th Anniversary, sayang 🤍';
                 msg.className = 'candle-message show-msg final-msg';
             }
         }, 600);

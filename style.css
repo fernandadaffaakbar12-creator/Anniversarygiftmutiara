@@ -461,7 +461,7 @@ body {
 .solar-system {
     position: relative;
     width: 100%;
-    height: 480px;
+    height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -541,17 +541,25 @@ body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* Jarak Orbit untuk 3 item (120° spacing) */
+/* Jarak Orbit untuk 5 item (72° spacing) */
 .item1 {
-    transform: rotateY(0deg) translateZ(230px);
+    transform: rotateY(0deg) translateZ(300px);
 }
 
 .item2 {
-    transform: rotateY(120deg) translateZ(230px);
+    transform: rotateY(72deg) translateZ(300px);
 }
 
 .item3 {
-    transform: rotateY(240deg) translateZ(230px);
+    transform: rotateY(144deg) translateZ(300px);
+}
+
+.item4 {
+    transform: rotateY(216deg) translateZ(300px);
+}
+
+.item5 {
+    transform: rotateY(288deg) translateZ(300px);
 }
 
 /* =========================================
@@ -1068,15 +1076,23 @@ body {
 
     /* Menyesuaikan jarak orbit di HP */
     .item1 {
-        transform: rotateY(0deg) translateZ(150px);
+        transform: rotateY(0deg) translateZ(180px);
     }
 
     .item2 {
-        transform: rotateY(120deg) translateZ(150px);
+        transform: rotateY(72deg) translateZ(180px);
     }
 
     .item3 {
-        transform: rotateY(240deg) translateZ(150px);
+        transform: rotateY(144deg) translateZ(180px);
+    }
+
+    .item4 {
+        transform: rotateY(216deg) translateZ(180px);
+    }
+
+    .item5 {
+        transform: rotateY(288deg) translateZ(180px);
     }
 
     #main-content {
